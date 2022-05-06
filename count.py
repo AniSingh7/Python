@@ -9,3 +9,5 @@ for i in test_str:
         empty_str[i] = 1
 
 print ("Count of all characters  is :\n " +  str(empty_str))
+
+print("count of character using unique code")
