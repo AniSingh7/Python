@@ -1,10 +1,12 @@
-def nest_dict(m):
-    for val in m.values():
-        if isinstance(val,dict):
-            yield from nest_dict(val)
+def get_values(d):
+    for v in d.values():
+        if isinstance(v, dict):
+            yield from get_values(v)
         else:
-            yield val
-        return val
-dict={'1':'Harsha','name':{'location':{'bangalore':{'marath','white'},'che':{'1':{'hy','ra'}}}}}
-n=nest_dict(dict)
-print(val)
+            yield v
+
+
+a = {'1':'Harsha','name':{'location':{'bangalore':{'marath','white'},'che':{'1':{'hy','ra'}}}}}
+
+print(list(get_values(a)))
+
