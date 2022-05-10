@@ -12,6 +12,7 @@ def count(str1):
     return uc,lc
 
 
+
 upper_count,lower_count=count(str1)
 
 print("count of upperCase is:",upper_count)
